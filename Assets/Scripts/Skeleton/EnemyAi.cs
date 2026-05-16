@@ -1,6 +1,7 @@
 using UnityEngine;
 using KnightAdventure.Utils;
 using System;
+using System.Collections.Generic;
 
 public class EnemyAi : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class EnemyAi : MonoBehaviour
 
     public EventHandler OnEnemyAttack;
 
+    private List<Rect> _roomBounds;
+
     public bool IsRunning
     {
         get
@@ -78,6 +81,11 @@ public class EnemyAi : MonoBehaviour
     {
         StateHandler();
         MovementDirectionHandler();
+    }
+
+    public void SetRoomBounds(List<Rect> roomBounds)
+    {
+        _roomBounds = roomBounds;
     }
 
     public void SetDeathState()
@@ -256,6 +264,16 @@ public class EnemyAi : MonoBehaviour
 
     private Vector2 GetRoamingPosition()
     {
+        if (_roomBounds != null && _roomBounds.Count > 0)
+        {
+            Rect rect = _roomBounds[UnityEngine.Random.Range(0, _roomBounds.Count)];
+
+            return new Vector2(
+                UnityEngine.Random.Range(rect.xMin + 1f, rect.xMax - 1f),
+                UnityEngine.Random.Range(rect.yMin + 1f, rect.yMax - 1f)
+            );
+        }
+
         return _startingPosition + Utils.GetRandomDir() * UnityEngine.Random.Range(_roamingDistanceMin, _roamingDistanceMax);
     }
 

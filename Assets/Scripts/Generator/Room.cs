@@ -20,6 +20,13 @@ public class Room : MonoBehaviour
 
     private readonly Vector2 oneCellCameraSize = new Vector2(10.6f, 5.3f);
 
+    private EnemyRoomSpawner enemyRoomSpawner;
+
+    private void Awake()
+    {
+        enemyRoomSpawner = GetComponent<EnemyRoomSpawner>();
+    }
+
     public void SetupRoom(Cell currentCell, RoomScriptable room)
     {
         this.currentCell = currentCell;
@@ -55,6 +62,10 @@ public class Room : MonoBehaviour
 
             default:
                 break;
+        }
+        if (enemyRoomSpawner != null)
+        {
+            enemyRoomSpawner.SpawnEnemies(currentCell);
         }
 
     }
