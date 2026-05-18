@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: c96df0d3b4519af46b7d2ae59505776d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - destructibleStone: {fileID: 6131292472326155569, guid: 8a81875675716704e8574f0706767ad5, type: 3}
+  - StoneDeathVFXPrefab: {fileID: 8198942273053390567, guid: 2ba8d7cae18fc784687101984be92a44, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

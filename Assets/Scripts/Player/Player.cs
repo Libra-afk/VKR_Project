@@ -1,18 +1,22 @@
 using UnityEngine;
 using System;
 using System.Collections;
-using Unity.VisualScripting;
+using UnityEngine.UI;
 
 [SelectionBase]
+
+
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
+
+    //[SerializeField] public Image Bar;
 
     public event EventHandler OnPlayerDeath;
     public event EventHandler OnFlashBlink;
 
     [SerializeField] public float _movingSpeed = 10f;
-    [SerializeField] private int _maxHealth = 10;
+    [SerializeField] public float _maxHealth = 10;
     [SerializeField] private float _damageRecoveryTime = 0.5f;
 
     Vector2 inputVector;
@@ -23,9 +27,12 @@ public class Player : MonoBehaviour
     private float _minMovingSpeed = 0.1f;
     private bool _isRunning = false;
 
-    private int _currentHealth;
+    public float _currentHealth;
     private bool _canTakeDamage;
     private bool _isAlive;
+
+    public float CurrentHealth => _currentHealth;
+    public float MaxHealth => _maxHealth;
 
 
     private void Awake()
@@ -72,6 +79,8 @@ public class Player : MonoBehaviour
             OnFlashBlink?.Invoke(this, EventArgs.Empty);
 
             StartCoroutine(DamageRecoveryRoutine());
+
+            //Bar.fillAmount = _currentHealth/10;
 
         }
         DetectDeath();

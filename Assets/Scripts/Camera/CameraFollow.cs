@@ -27,13 +27,11 @@ public class CameraFollow : MonoBehaviour
         Vector3 targetPosition = target.position;
         targetPosition.z = transform.position.z;
 
+        // Ограничиваем внутри комнаты
         Vector3 clampedPosition = ClampToRoomBounds(targetPosition);
 
-        transform.position = Vector3.Lerp(
-            transform.position,
-            clampedPosition,
-            followSpeed * Time.deltaTime
-        );
+        // Камера сразу ставится в позицию игрока
+        transform.position = clampedPosition;
     }
 
     public void SetTarget(Transform newTarget)

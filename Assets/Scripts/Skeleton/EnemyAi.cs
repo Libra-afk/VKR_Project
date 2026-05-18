@@ -13,7 +13,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float _roamingTimerMax = 2f;
 
     [Header("Movement")]
-    [SerializeField] private float _moveSpeed = 2f;
+    [SerializeField] private float _moveSpeed = 1f;
     [SerializeField] private float _stopDistance = 0.1f;
 
     [SerializeField] private bool _isChasingEnemy = false;
@@ -21,8 +21,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float _chasingSpeedMultiplier = 2f;
 
     [SerializeField] private bool _isAttackingEnemy = false;
-    [SerializeField] private float _attackingDistance = 2f;
-    [SerializeField] private float _attackRate = 2f;
+    [SerializeField] private float _attackingDistance = 1f;
+    [SerializeField] private float _attackRate = 1f;
     private float _nextAttackTime = 0f;
 
     private Rigidbody2D _rb;

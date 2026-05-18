@@ -6,6 +6,8 @@ public class EnemyRoomSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject skeletonPrefab;
 
+    [SerializeField] private GameObject bossPrefab;
+
     [Header("Spawn Settings")]
     [SerializeField] private Vector2 oneCellSize = new Vector2(10.6f, 5.3f);
     [SerializeField] private float spawnPaddingX = 2f;
@@ -17,35 +19,54 @@ public class EnemyRoomSpawner : MonoBehaviour
 
     public void SpawnEnemies(Cell roomCell)
     {
-        if (skeletonPrefab == null)
+        if (skeletonPrefab == null || bossPrefab == null)
             return;
 
-        if (roomCell.roomType != RoomType.Regular)
-            return;
-
-        if (roomCell.cellList.Contains(StartRoomIndex))
-            return;
-
-        int enemiesCount = GetEnemiesCount(roomCell.roomShape);
-
-        List<Vector2> spawnPositions = new List<Vector2>();
-        List<Rect> roomRects = GetRoomRects(roomCell);
-
-        for (int i = 0; i < enemiesCount; i++)
+        // Если комната обычная, спавним обычных скелетов
+        if (roomCell.roomType == RoomType.Regular)
         {
-            if (TryGetSpawnPosition(roomRects, spawnPositions, out Vector2 spawnPosition))
+            if (roomCell.cellList.Contains(StartRoomIndex))
+                return;
+
+            int enemiesCount = GetEnemiesCount(roomCell.roomShape);
+            List<Vector2> spawnPositions = new List<Vector2>();
+            List<Rect> roomRects = GetRoomRects(roomCell);
+
+            for (int i = 0; i < enemiesCount; i++)
             {
-                GameObject enemy = Instantiate(skeletonPrefab, spawnPosition, Quaternion.identity, transform);
-
-                EnemyAi enemyAi = enemy.GetComponent<EnemyAi>();
-
-                if (enemyAi != null)
+                if (TryGetSpawnPosition(roomRects, spawnPositions, out Vector2 spawnPosition))
                 {
-                    enemyAi.SetRoomBounds(roomRects);
-                }
+                    GameObject enemy = Instantiate(skeletonPrefab, spawnPosition, Quaternion.identity, transform);
 
-                spawnPositions.Add(spawnPosition);
+                    EnemyAi enemyAi = enemy.GetComponent<EnemyAi>();
+                    if (enemyAi != null)
+                        enemyAi.SetRoomBounds(roomRects);
+
+                    spawnPositions.Add(spawnPosition);
+                }
             }
+        }
+        // Если комната босса, спавним одного босса-скелета
+        else if (roomCell.roomType == RoomType.Boss)
+        {
+            List<Rect> roomRects = GetRoomRects(roomCell);
+            Vector2 spawnPosition = Vector2.zero;
+
+            // Спавним босса примерно в центре комнаты
+            if (roomRects.Count > 0)
+            {
+                Rect rect = roomRects[0]; // берём первую ячейку комнаты
+                spawnPosition = new Vector2(
+                    rect.center.x,
+                    rect.center.y
+                );
+            }
+
+            GameObject boss = Instantiate(bossPrefab, spawnPosition, Quaternion.identity, transform);
+
+            EnemyAi bossAi = boss.GetComponent<EnemyAi>();
+            if (bossAi != null)
+                bossAi.SetRoomBounds(roomRects);
         }
     }
 

@@ -714,6 +714,7 @@ GameObject:
   - component: {fileID: 5954260838334669636}
   - component: {fileID: 2496910956268491270}
   - component: {fileID: -6327613022495254849}
+  - component: {fileID: -418371462557609550}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -848,6 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   spriteRenderer: {fileID: 5954260838334669636}
+  enemyRoomSpawner: {fileID: -6327613022495254849}
 --- !u!114 &-6327613022495254849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,11 +863,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyRoomSpawner
   skeletonPrefab: {fileID: 882794821171551942, guid: 28f6414cad439894d9bdee05741ce33d, type: 3}
+  bossPrefab: {fileID: 882794821171551942, guid: b9fdca49b81ab6f41ae043955f974041, type: 3}
   oneCellSize: {x: 10.6, y: 5.3}
   spawnPaddingX: 2
   spawnPaddingY: 1.2
   minDistanceBetweenEnemies: 1.5
   maxSpawnAttempts: 100
+--- !u!114 &-418371462557609550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564560056920809248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97eadeff5b2ae747b58109b5b1a0f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomItemSpawner
+  rockPrefab: {fileID: 654522512090740263, guid: 8a81875675716704e8574f0706767ad5, type: 3}
+  extraHpPrefab: {fileID: 5180140588795081409, guid: f42535d5b3ed1704ba2b942e189b42d9, type: 3}
+  bossKeyPrefab: {fileID: 5180140588795081409, guid: 3d794b68801feb54093bdeb916daf8a7, type: 3}
+  rocksCount: 3
+  spawnRangeX: {x: -3, y: 3}
+  spawnRangeY: {x: -2, y: 2}
 --- !u!1 &2100768006812239095
 GameObject:
   m_ObjectHideFlags: 0

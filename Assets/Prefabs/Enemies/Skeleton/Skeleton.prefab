@@ -187,13 +187,13 @@ MonoBehaviour:
   _roamingDistanceMax: 7
   _roamingDistanceMin: 3
   _roamingTimerMax: 2
-  _moveSpeed: 2
+  _moveSpeed: 1
   _stopDistance: 0.1
   _isChasingEnemy: 1
   _chasingDistance: 4
   _chasingSpeedMultiplier: 2
   _isAttackingEnemy: 1
-  _attackingDistance: 2
+  _attackingDistance: 1
   _attackRate: 1
 --- !u!114 &5800565560079484203
 MonoBehaviour:

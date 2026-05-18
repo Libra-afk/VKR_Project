@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class EnemyEntity : MonoBehaviour
 {
+    public bool IsAlive => _currentHealth > 0;
+
     [SerializeField] private EnemySO _enemySO;
 
     public event EventHandler OnTakeHit;

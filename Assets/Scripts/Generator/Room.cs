@@ -15,12 +15,12 @@ public class Room : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
 
-    private Cell currentCell;
+    public Cell currentCell;
     private List<Door> roomDoors = new List<Door>();
 
     private readonly Vector2 oneCellCameraSize = new Vector2(10.6f, 5.3f);
 
-    private EnemyRoomSpawner enemyRoomSpawner;
+    public EnemyRoomSpawner enemyRoomSpawner;
 
     private void Awake()
     {
@@ -551,6 +551,17 @@ public class Room : MonoBehaviour
                 Debug.LogWarning($"No room collider prefix found for sprite: {spriteName}");
                 return "";
         }
+    }
+
+    public bool HasEnemies()
+    {
+        EnemyEntity[] enemies = GetComponentsInChildren<EnemyEntity>();
+        foreach (var enemy in enemies)
+        {
+            if (enemy.IsAlive)
+                return true;
+        }
+        return false;
     }
 
 }

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b97eadeff5b2ae747b58109b5b1a0f57
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - rockPrefab: {fileID: 654522512090740263, guid: 8a81875675716704e8574f0706767ad5, type: 3}
+  - extraHpPrefab: {fileID: 5180140588795081409, guid: f42535d5b3ed1704ba2b942e189b42d9, type: 3}
+  - bossKeyPrefab: {fileID: 5180140588795081409, guid: 3d794b68801feb54093bdeb916daf8a7, type: 3}
+  - room: {fileID: 2496910956268491270, guid: b7b72fbd2909df84288dc885cbbed629, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
