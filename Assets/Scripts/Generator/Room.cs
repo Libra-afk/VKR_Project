@@ -37,7 +37,7 @@ public class Room : MonoBehaviour
 
         SetupRoomColliders(selectedRoomSprite.name);
 
-        if (currentCell.roomType == RoomType.Secret) return;
+        //if (currentCell.roomType == RoomType.Secret) return;
 
         var floorplan = MapGenerator.instance.getFloorPlan;
         var cellList = MapGenerator.instance.getSpawnedCells;
@@ -193,20 +193,33 @@ public class Room : MonoBehaviour
         int neighbourIndex = fromIndex + GetOffset(direction);
 
         if (neighbourIndex < 0 || neighbourIndex >= floorplan.Length) return;
-
         if (floorplan[neighbourIndex] != 1) return;
 
         var foundCell = cellList.FirstOrDefault(x => x.cellList.Contains(neighbourIndex));
-
         if (foundCell == null) return;
 
-        if (foundCell.roomType == RoomType.Secret) return;
-
         var door = Instantiate(RoomManager.instance.doorPrefab, transform);
-
         door.transform.position = (Vector2)transform.position + positionOffset;
 
-        SetupDoor(door, direction, currentCell.roomType == RoomType.Regular ? foundCell.roomType : currentCell.roomType);
+        RoomType doorRoomType;
+
+        if (currentCell.roomType == RoomType.Secret || foundCell.roomType == RoomType.Secret)
+        {
+            doorRoomType = RoomType.Secret;
+        }
+        else
+        {
+            doorRoomType = currentCell.roomType == RoomType.Regular
+                ? foundCell.roomType
+                : currentCell.roomType;
+        }
+
+        SetupDoor(door, direction, doorRoomType);
+
+        if (currentCell.roomType == RoomType.Secret || foundCell.roomType == RoomType.Secret)
+        {
+            door.MakeSecretDoor();
+        }
 
         door.SetupDoorTrigger(this, fromIndex, neighbourIndex, direction);
         roomDoors.Add(door);

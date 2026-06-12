@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public event EventHandler OnPlayerDeath;
     public event EventHandler OnFlashBlink;
 
-    [SerializeField] public float _movingSpeed = 10f;
+    [SerializeField] public float _movingSpeed = 6f;
     [SerializeField] public float _maxHealth = 10;
     [SerializeField] private float _damageRecoveryTime = 0.5f;
 
@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     public float CurrentHealth => _currentHealth;
     public float MaxHealth => _maxHealth;
 
+    public bool HasBossKey { get; set; }
 
     private void Awake()
     {
@@ -65,6 +66,10 @@ public class Player : MonoBehaviour
         HandleMovement();
     }
 
+    public void ResetRunState()
+    {
+        HasBossKey = false;
+    }
     public bool IsAlive() => _isAlive;
 
     public void TakeDamage(Transform damageSource, int damage)
@@ -118,6 +123,12 @@ public class Player : MonoBehaviour
 
     private void GameInput_OnPlayerAttack(object sender, System.EventArgs e)
     {
+        if (!_isAlive)
+            return;
+
+        if (Time.timeScale == 0f)
+            return;
+
         ActiveWeapon.Instance.GetActiveWeapon().Attack();
     }
 

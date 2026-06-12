@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889465410637053818}
   - component: {fileID: 6777381827123486298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate1_Left2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391052202996578745}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7728339609217057919}
   - component: {fileID: 376519737162129166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate2_Bottom2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495282293737408559}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8707241046426453910}
   - component: {fileID: 260638329848958650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate3_Bottom2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586077618428348210}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6865776094112161479}
   - component: {fileID: 9050649020209510760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x1_Room_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700806416765348088}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5760408489149449346}
   - component: {fileID: 8418642980164132214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745438155728333409}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129447731024450064}
   - component: {fileID: 7829584634110175304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x2_Room_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810401434258718506}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7042811106629591124}
   - component: {fileID: 1037796969537072284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815854264004925102}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8048098987305005407}
   - component: {fileID: 5924359337826071087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate2_Left1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894117206959008362}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5168145429325119702}
   - component: {fileID: 4500469273172207522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x2_Room_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,7 +663,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150319163060892698}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -715,7 +715,8 @@ GameObject:
   - component: {fileID: 2496910956268491270}
   - component: {fileID: -6327613022495254849}
   - component: {fileID: -418371462557609550}
-  m_Layer: 0
+  - component: {fileID: -2716971626245428615}
+  m_Layer: 8
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,6 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   spriteRenderer: {fileID: 5954260838334669636}
+  currentCell: {fileID: 0}
   enemyRoomSpawner: {fileID: -6327613022495254849}
 --- !u!114 &-6327613022495254849
 MonoBehaviour:
@@ -887,6 +889,29 @@ MonoBehaviour:
   rocksCount: 3
   spawnRangeX: {x: -3, y: 3}
   spawnRangeY: {x: -2, y: 2}
+  minDistanceBetweenRocks: 1.5
+  rockCheckSize: {x: 1.2, y: 1.2}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  maxSpawnAttempts: 100
+  room: {fileID: 0}
+--- !u!114 &-2716971626245428615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564560056920809248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddea27e821f25a4d870cb16ae85d136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SecretRoomSpawner
+  extraHpPrefab: {fileID: 5180140588795081409, guid: f42535d5b3ed1704ba2b942e189b42d9, type: 3}
+  spawnRangeX: 3
+  spawnRangeY: 2
+  room: {fileID: 0}
 --- !u!1 &2100768006812239095
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,7 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871714089140131237}
   - component: {fileID: 5948485393907441257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate2_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,7 +951,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100768006812239095}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -975,7 +1000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8726408087768945217}
   - component: {fileID: 8129053790029869450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate1_Left1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1029,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2175157087878097508}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1053,7 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213546153283661260}
   - component: {fileID: 1059038008476439868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Top2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1107,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2434971410730207000}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1131,7 +1156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4493778782993703156}
   - component: {fileID: 3637573400491669865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x2_Room_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1160,7 +1185,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2435931416023638347}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1209,7 +1234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8252572146369979118}
   - component: {fileID: 5577409479612621030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x2_Room_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1263,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2747270313360980913}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1287,7 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8697372201934659343}
   - component: {fileID: 5637311728972745202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x2_Room_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1341,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2799505564598134869}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1365,7 +1390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7237552846092842300}
   - component: {fileID: 8236009669694211655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Right2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1394,7 +1419,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2859496807992772521}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1443,7 +1468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8649966278786341999}
   - component: {fileID: 1261356231310788110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate3_Bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1472,7 +1497,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2915761815336700957}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1521,7 +1546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273773545199246336}
   - component: {fileID: 76531452150224768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1575,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3471363556911598426}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1599,7 +1624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2334436345984887509}
   - component: {fileID: 8315380809154289782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x2_Room_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1628,7 +1653,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3759484394750954777}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1677,7 +1702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8863283419866878879}
   - component: {fileID: 846427641310730610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x1_Room_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1706,7 +1731,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914983711072565756}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1755,7 +1780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6639785080348564213}
   - component: {fileID: 3243982137914447267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate1_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,7 +1809,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4089405757290607233}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1833,7 +1858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524204943827339220}
   - component: {fileID: 5091104214222830144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate2_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1862,7 +1887,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4746690841225102033}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1911,7 +1936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3451271716667786831}
   - component: {fileID: 3386206076012707616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x1_Room_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1940,7 +1965,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4898113687885218792}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1989,7 +2014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6633287193518229304}
   - component: {fileID: 457472353749080493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x2_Room_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2018,7 +2043,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4963182465806030930}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2067,7 +2092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5606638398799465468}
   - component: {fileID: 8799086967721616256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate3_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,7 +2121,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5229324289683006083}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2145,7 +2170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4166188437596640528}
   - component: {fileID: 7118832554639013973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate2_Lefr2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2174,7 +2199,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5316961886676789239}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2223,7 +2248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2827355429573939057}
   - component: {fileID: 328614614806099741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate3_Right2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2252,7 +2277,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6068680686500331690}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2301,7 +2326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5059948593156050941}
   - component: {fileID: 9195081690714347496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Right1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2330,7 +2355,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6141706517325495239}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2379,7 +2404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2925449523387170587}
   - component: {fileID: 8787342324750209338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x1_Room_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2408,7 +2433,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6150851609153498088}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2457,7 +2482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5221653615965950935}
   - component: {fileID: 6530277664747000530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x2_Room_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2486,7 +2511,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6227394258494088858}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2535,7 +2560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5791486191876555995}
   - component: {fileID: 613545599775983650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate1_Top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2564,7 +2589,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6359471481215265905}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2613,7 +2638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2261406062399587692}
   - component: {fileID: 2119887265253830563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate2_Bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2642,7 +2667,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6762729702668780840}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2691,7 +2716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7845340588021974094}
   - component: {fileID: 8294465566058228362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x1_Room_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2720,7 +2745,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7409055857228849691}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2769,7 +2794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6606786852578815029}
   - component: {fileID: 5005248311864764555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x1_Room_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2798,7 +2823,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7703548321396247495}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2847,7 +2872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5931095878897368282}
   - component: {fileID: 1669666990959330193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate3_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2876,7 +2901,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7898921492831786554}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2925,7 +2950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921676595482058802}
   - component: {fileID: 4227453416362710359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate1_Top2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2954,7 +2979,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7925442914126035546}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -3003,7 +3028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783919276423177186}
   - component: {fileID: 4956495210856437072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2x1_Room_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3032,7 +3057,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8022462601470463959}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -3081,7 +3106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3747264886806824759}
   - component: {fileID: 8686103297539999030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate1_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3110,7 +3135,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8430899089949501883}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -3159,7 +3184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5954397057355308718}
   - component: {fileID: 208981669692157440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x1_Room_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3188,7 +3213,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8549141415605091629}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -3237,7 +3262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837515452273385346}
   - component: {fileID: 8405861380498801360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotate3_Right1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3266,7 +3291,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8701669340729577460}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

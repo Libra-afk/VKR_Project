@@ -68,6 +68,11 @@ public class RoomManager : MonoBehaviour
         );
     }
 
+    public Room GetRoomByCellIndex(int cellIndex)
+    {
+        return createdRooms.FirstOrDefault(room => room.ContainsCellIndex(cellIndex));
+    }
+
     public void SetupRooms(List<Cell> spawnedCells)
     {
         for (int i = createdRooms.Count - 1; i >= 0; i--)
@@ -136,6 +141,14 @@ public class RoomManager : MonoBehaviour
         {
             currentPlayer.transform.position = spawnPosition;
         }
+
+        Player player = currentPlayer.GetComponent<Player>();
+        if (player != null)
+        {
+            player.ResetRunState();
+        }
+
+
         if (cameraFollow != null)
         {
             cameraFollow.SetTarget(currentPlayer.transform);
@@ -152,6 +165,8 @@ public class RoomManager : MonoBehaviour
             SetActiveRoom(startRoom);
         }
     }
+
+
 
     public bool DoesTileMatchCell(int[] occupiedTiles, Cell cell)
     {
@@ -289,4 +304,6 @@ public class RoomManager : MonoBehaviour
             room.SetDoorsActive(active);
         }
     }
+
+    
 }

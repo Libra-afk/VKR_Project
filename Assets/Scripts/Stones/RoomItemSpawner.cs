@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomItemSpawner : MonoBehaviour
@@ -9,8 +10,14 @@ public class RoomItemSpawner : MonoBehaviour
 
     [Header("Spawn Settings")]
     [SerializeField] private int rocksCount = 3;
-    [SerializeField] private Vector2 spawnRangeX = new Vector2(-3f, 3f);
-    [SerializeField] private Vector2 spawnRangeY = new Vector2(-2f, 2f);
+    [SerializeField] private Vector2 spawnRangeX = new Vector2(-2.2f, 2.2f);
+    [SerializeField] private Vector2 spawnRangeY = new Vector2(-1.1f, 1.1f);
+    [SerializeField] private float minDistanceBetweenRocks = 1.5f;
+    [SerializeField] private Vector2 rockCheckSize = new Vector2(1.2f, 1.2f);
+    [SerializeField] private LayerMask obstacleLayerMask;
+    [SerializeField] private int maxSpawnAttempts = 100;
+
+
 
     [SerializeField] private Room room;
 
@@ -34,30 +41,83 @@ public class RoomItemSpawner : MonoBehaviour
 
     private void SpawnRocksWithItems()
     {
-        // Только для нужных комнат
         if (room.currentCell.roomType != RoomType.Item &&
             room.currentCell.roomType != RoomType.Shop)
             return;
 
         int bonusIndex = Random.Range(0, rocksCount);
+        List<Vector2> usedPositions = new List<Vector2>();
 
         for (int i = 0; i < rocksCount; i++)
         {
-            float x = Random.Range(spawnRangeX.x, spawnRangeX.y);
-            float y = Random.Range(spawnRangeY.x, spawnRangeY.y);
-            Vector2 spawnPos = (Vector2)room.transform.position + new Vector2(x, y);
+            if (!TryGetRockSpawnPosition(usedPositions, out Vector2 spawnPos))
+            {
+                Debug.LogWarning("Не удалось найти свободное место для камня.");
+                continue;
+            }
 
-            GameObject rock = Instantiate(rockPrefab, spawnPos, Quaternion.identity);
+            GameObject rock = Instantiate(rockPrefab, spawnPos, Quaternion.identity, room.transform);
+            usedPositions.Add(spawnPos);
 
             if (i == bonusIndex)
             {
-                DestructibleStoneVisual visual = rock.GetComponent<DestructibleStoneVisual>();
+                DestructibleStoneVisual visual = rock.GetComponentInChildren<DestructibleStoneVisual>();
+
                 if (visual != null)
                 {
-                    GameObject itemToSpawn = (Random.value < 0.5f) ? extraHpPrefab : bossKeyPrefab;
+                    GameObject itemToSpawn = room.currentCell.roomType == RoomType.Item
+                        ? bossKeyPrefab
+                        : extraHpPrefab;
+
                     visual.SetItemPrefab(itemToSpawn);
+                }
+                else
+                {
+                    Debug.LogWarning("DestructibleStoneVisual не найден на камне или его дочерних объектах.");
                 }
             }
         }
     }
+
+    private bool TryGetRockSpawnPosition(List<Vector2> usedPositions, out Vector2 spawnPos)
+    {
+        for (int attempt = 0; attempt < maxSpawnAttempts; attempt++)
+        {
+            float x = Random.Range(spawnRangeX.x, spawnRangeX.y);
+            float y = Random.Range(spawnRangeY.x, spawnRangeY.y);
+
+            Vector2 candidate = (Vector2)room.transform.position + new Vector2(x, y);
+
+            bool tooCloseToOtherRock = false;
+
+            foreach (Vector2 usedPosition in usedPositions)
+            {
+                if (Vector2.Distance(candidate, usedPosition) < minDistanceBetweenRocks)
+                {
+                    tooCloseToOtherRock = true;
+                    break;
+                }
+            }
+
+            if (tooCloseToOtherRock)
+                continue;
+
+            Collider2D obstacle = Physics2D.OverlapBox(
+                candidate,
+                rockCheckSize,
+                0f,
+                obstacleLayerMask
+            );
+
+            if (obstacle != null)
+                continue;
+
+            spawnPos = candidate;
+            return true;
+        }
+
+        spawnPos = Vector2.zero;
+        return false;
+    }
+
 }

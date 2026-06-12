@@ -206,10 +206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55eed9ba9b6bff44911c4d5aaff3a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  Bar: {fileID: 0}
   _movingSpeed: 10
   _maxHealth: 10
   _damageRecoveryTime: 0.5
+  _currentHealth: 0
 --- !u!114 &9029792017742468167
 MonoBehaviour:
   m_ObjectHideFlags: 0

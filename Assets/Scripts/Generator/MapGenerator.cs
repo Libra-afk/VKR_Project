@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
 
@@ -101,7 +102,9 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
-    void SetupDungeon() { 
+    void SetupDungeon() 
+    {
+        Stopwatch sw = Stopwatch.StartNew();
         for (int i = 0; i < spawnedCells.Count; i++)
         {
             Destroy(spawnedCells[i].gameObject);
@@ -119,6 +122,9 @@ public class MapGenerator : MonoBehaviour
         VisitCell(StartRoomIndex);    //начальная комната
 
         GenerateDungeon();
+
+        sw.Stop();
+        UnityEngine.Debug.Log($"Время генерации уровня: {sw.ElapsedMilliseconds} мс");
     }
 
     void GenerateDungeon()
@@ -176,6 +182,7 @@ public class MapGenerator : MonoBehaviour
             SetupDungeon();
             return;
         }
+        floorPlan[secretRoomIndex] = 1;
         SpawnRoom(secretRoomIndex);
 
         UpdateSpecialRoomVisuals();

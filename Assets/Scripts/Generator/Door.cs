@@ -17,6 +17,9 @@ public class Door : MonoBehaviour
     public int TargetCellIndex { get; private set; }
     public EdgeDirection Direction { get; private set; }
 
+
+
+
     private void Awake()
     {
         DisableAllDoorColliders();
@@ -25,6 +28,7 @@ public class Door : MonoBehaviour
     public void SetDoorSprite(Sprite door)
     {
         spriteRenderer.sprite = door;
+        spriteRenderer.enabled = true;
     }
 
     public void SetupDoorTrigger(Room ownerRoom, int fromCellIndex, int targetCellIndex, EdgeDirection direction)
@@ -42,9 +46,7 @@ public class Door : MonoBehaviour
         DoorTrigger doorTrigger = activeCollider.GetComponent<DoorTrigger>();
 
         if (doorTrigger == null)
-        {
             doorTrigger = activeCollider.gameObject.AddComponent<DoorTrigger>();
-        }
 
         doorTrigger.Setup(this);
     }
@@ -54,9 +56,7 @@ public class Door : MonoBehaviour
         DisableAllDoorColliders();
 
         if (active && activeCollider != null)
-        {
             activeCollider.enabled = true;
-        }
     }
 
     public Vector2 GetDoorWorldPosition()
@@ -76,21 +76,35 @@ public class Door : MonoBehaviour
     {
         switch (direction)
         {
-            case EdgeDirection.Up:
-                return doorTopCollider;
-
-            case EdgeDirection.Down:
-                return doorBottomCollider;
-
-            case EdgeDirection.Left:
-                return doorLeftCollider;
-
-            case EdgeDirection.Right:
-                return doorRightCollider;
-
-            default:
-                return null;
+            case EdgeDirection.Up: return doorTopCollider;
+            case EdgeDirection.Down: return doorBottomCollider;
+            case EdgeDirection.Left: return doorLeftCollider;
+            case EdgeDirection.Right: return doorRightCollider;
+            default: return null;
         }
+    }
+
+    public bool IsSecretDoor { get; private set; }
+    public bool IsRevealed { get; private set; } = true;
+
+    public void MakeSecretDoor()
+    {
+        IsSecretDoor = true;
+        IsRevealed = false;
+
+        if (spriteRenderer != null)
+            spriteRenderer.enabled = false;
+    }
+
+    public void RevealSecretDoor()
+    {
+        if (!IsSecretDoor || IsRevealed)
+            return;
+
+        IsRevealed = true;
+
+        if (spriteRenderer != null)
+            spriteRenderer.enabled = true;
     }
 
     private void DisableAllDoorColliders()

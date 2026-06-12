@@ -67,6 +67,14 @@ public class EnemyRoomSpawner : MonoBehaviour
             EnemyAi bossAi = boss.GetComponent<EnemyAi>();
             if (bossAi != null)
                 bossAi.SetRoomBounds(roomRects);
+
+            EnemyEntity bossEntity = boss.GetComponent<EnemyEntity>();
+
+            if (bossEntity != null && VictoryScreenUI.Instance != null)
+            {
+                VictoryScreenUI.Instance.RegisterBoss(bossEntity);
+            }
+
         }
     }
 

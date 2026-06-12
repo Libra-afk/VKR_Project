@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SelfDestoyVFX : MonoBehaviour
+public class SelfDestroyVFX : MonoBehaviour
 {
     private ParticleSystem _ps;
 
